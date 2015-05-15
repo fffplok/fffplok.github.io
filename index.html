@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" id="vp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <script>
+    //if landscape orientation choose innerWidth, otherwise innerHeight as width value
+    var w = (window.innerWidth > window.innerHeight) ? window.innerWidth : window.innerHeight;
+    //adjust viewport scale
+    if (w < 768) {
+      document.getElementById('vp').setAttribute('content','width=device-width, initial-scale=0.5');
+    }
+   </script>
+
+	<title>fffplok Portfolio</title>
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato|Syncopate" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="index_assets/slick/slick.css">
+  <link rel="stylesheet" href="index_assets/slick/slick-theme.css">
+  <link rel="stylesheet" href="index_assets/css/style.css">
+  <link rel="stylesheet" href="index_assets/css/jquery.fullPage.css" />
+
+  <script src="index_assets/js/jQuery.js"></script>
+  <script src="index_assets/js/helper.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
+	<script src="index_assets/js/jquery.fullPage.js"></script>
+</head>
+
+<body>
+  <!-- spinner displays while loading -->
+  <img id="spinner" src='index_assets/slick/ajax-loader.gif' alt="spinner">
+
+  <!-- menu -->
+	<ul id="menu">
+		<li data-menuanchor="header" class="active"><a href="#header">greeting</a></li>
+		<li data-menuanchor="work"><a href="#work">work</a></li>
+    <li data-menuanchor="projects"><a href="#projects">projects</a></li>
+		<li data-menuanchor="education"><a href="#education">education</a></li>
+		<li data-menuanchor="whereabouts"><a href="#whereabouts">location</a></li>
+		<li data-menuanchor="connect"><a href="#connect">connect</a></li>
+	</ul>
+
+	<div id="main">
+
+    <!-- header -->
+    <div class="section" id="section0">
+    	<div class="container" id="idheader">
+    		<div class="cell">
+				</div>
+				<div class="cell">
+				</div>
+			</div>
+    </div>
+
+    <!-- work experience -->
+    <div class="section" id="section1">
+    	<div class="container" id="idwork">
+	    	<h2>Work Experience</h2>
+      </div>
+    </div>
+
+    <!-- projects -->
+    <div class="section" id="section2">
+      <div id="idprojects">
+      </div>
+    </div>
+
+    <!-- education -->
+    <div class="section" id="section3">
+      <div class="container" id="ideducation">
+        <h2>Education</h2>
+        <div class="row">
+          <div class="cell">
+            <h3>Traditional</h3>
+          </div>
+          <div class="cell">
+            <h3>Online</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- map -->
+	  <div class="section" id="section4">
+    	<div class="container" id="idwhereabouts">
+    		<h2>Where I've Lived and Worked</h2>
+    	</div>
+    </div>
+
+
+    <!-- connect -->
+    <div class="section" id="section5">
+    	<div class="container" id="idconnect">
+    		<h2>Let's Connect</h2>
+    	</div>
+    </div>
+
+	</div>
+
+  <!-- javascript for carousel -->
+	<script src="index_assets/slick/slick.js"></script>
+
+  <!--
+  The next line tells the browser where to download the JavaScript file you'll be
+  writing. In resumeBuilder.js, you'll be writing code that builds the resume
+  dynamically when this website, index.html, is opened.
+  -->
+  <script src="index_assets/js/resumeBuilder.js"></script>
+
+  <!--
+  These scripts are written in JavaScript. You'll be breaking them down as part of
+  a quiz. Essentially, the next few lines are checking to see if you have not
+  changed each section of the resume. If you have not made any changes to a section
+  of the resume, then that part of the resume does not show up. More on this in the
+  course.
+  -->
+
+  <!--
+  <script type="text/javascript">
+    // Notice how all of a sudden there's JavaScript inside this HTML
+    // document? You can write JavaScript between <script> tags. At the end of your
+    // JavaScript, don't forget the closing script tag with the slash (/).
+
+
+    // Also, this is a JavaScript style comment. You can comment in JavaScript with:
+
+    //   two slashes for all following characters on a single line, or
+
+    /*
+        an opening and closing set of slash asterisks for block comments.
+    */
+
+
+    //top contacts not used any more
+    //A further enhancement would be to hide menu button as well as section when the section is empty but that makes it difficult to work with the fullPage plugin's reliance on indexed identifier section0 .. sectionN
+
+    //hiding code may now be found in builder.assessContent in resumeBuilder.js
+
+    //original hiding code
+    if(document.getElementsByClassName('work-entry').length === 0) {
+      document.getElementById('workExperience').style.display = 'none';
+      // document.getElementById('workExperience').style.backgroundColor = 'black';
+    }
+    if(document.getElementsByClassName('project-entry').length === 0) {
+      document.getElementById('projects').style.display = 'none';
+      // document.getElementById('projects').style.backgroundColor = 'black';
+    }
+    if(document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById('education').style.display = 'none';
+      // document.getElementById('education').style.backgroundColor = 'black';
+    }
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('letsConnect').style.display = 'none';
+      // document.getElementById('letsConnect').style.backgroundColor = 'black';
+    }
+    if(document.getElementById('map') === null) {
+      document.getElementById('mapDiv').style.display = 'none';
+      // document.getElementById('mapDiv').style.backgroundColor = 'black';
+    }
+
+  </script>
+  -->
+</body>
+</html>
